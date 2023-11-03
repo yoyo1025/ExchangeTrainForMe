@@ -1,0 +1,79 @@
+@charset "UTF-8";
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ebf3f3;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(208, 242, 228);
+    height: 50px;
+}
+
+.time-info, .distance-info {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #000000;
+}
+
+.route-details {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    max-width: 900px;
+}
+
+.route-step1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0;
+    border-left: 2px solid #ddd;
+    padding-left: 10px;
+    padding: 10px;
+    background-color: rgb(235, 225, 250);
+}
+
+.route-step2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0;
+    border-left: 2px solid #ddd;
+    padding-left: 10px;
+    padding: 10px;
+    background-color: rgb(235, 225, 250);
+}
+
+.route-step3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0;
+    border-left: 2px solid #ddd;
+    padding-left: 10px;
+    padding: 10px;
+    background-color: rgb(235, 225, 250);
+}
+
+.train1{
+    font-size: 85%;
+    background-color: #f3f3f3;
+    padding: 5px;
+    border-left: 4px solid red;
+}
+
+.train2{
+    font-size: 85%;
+    background-color: #f3f3f3;
+    padding: 5px;
+    border-left: 4px solid red;
+}
+
+.location {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}

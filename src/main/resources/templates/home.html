@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>乗り換え案内</title>
+    <meta name="description" content="自分専用の乗り換え案内">
+    <link th:href="@{/css/home-view.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 th:text="${title1}"></h1>
+        <form action="/Konosu-HigashiOmiya" method="post">
+            <input type="submit" value="検索する">
+        </form>
+
+        <h1 th:text="${title2}"></h1>
+        <form action="/HigashiOmiya-Konosu" method="post">
+            <input type="submit" value="検索する">
+        </form>
+
+        <p class="currentTime">現在時刻: <span id="currentDateTime"></span></p>
+    </div>
+
+    <script>
+        function updateCurrentTime() {
+            var now = new Date();
+            var formattedDateTime = now.getFullYear() + "/" + 
+                                    ("0" + (now.getMonth() + 1)).slice(-2) + "/" + 
+                                    ("0" + now.getDate()).slice(-2) + " " + 
+                                    ("0" + now.getHours()).slice(-2) + ":" + 
+                                    ("0" + now.getMinutes()).slice(-2) + ":" + 
+                                    ("0" + now.getSeconds()).slice(-2);
+            document.getElementById("currentDateTime").textContent = formattedDateTime;
+        }
+
+        // 初期時刻を設定
+        updateCurrentTime();
+
+        // 1秒ごとにupdateCurrentTime関数を実行
+        setInterval(updateCurrentTime, 1000);
+    </script>
+</body>
+</html>

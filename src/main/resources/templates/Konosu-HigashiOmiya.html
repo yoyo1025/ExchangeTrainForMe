@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鴻巣駅から東大宮駅</title>
+    <link th:href="@{/css/root.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="time-info" th:text="${Departure} + '発 → ○○：○○着'"></div>
+            <div class="distance-info">距離: 25.1km</div>
+        </div>
+        <div class="route-details">
+            <div class="route-step1">
+                <span class="location" th:text="${Departure} + ' 鴻巣'"></span>
+            </div>
+            <div class="train1" th:text="${TrainName}"></div>
+            <div class="route-step2">
+            <span class="location" th:text="${Arrival} + ' - ○○：○○ 大宮(埼玉県)'"></span>
+            </div>
+            <div class="train2">JR湘南新宿ライン・宇都宮行</div>
+            <div class="route-step3">
+                20:17 <span class="location">東大宮</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
