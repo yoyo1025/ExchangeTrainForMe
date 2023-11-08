@@ -9,20 +9,20 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="time-info" th:text="${Departure} + '発 → ○○：○○着'"></div>
+            <div class="time-info" th:text="${Departure1} + '発 → '+${Arrival2}+'着'"></div>
             <div class="distance-info">距離: 25.1km</div>
         </div>
         <div class="route-details">
             <div class="route-step1">
-                <span class="location" th:text="${Departure} + ' 鴻巣'"></span>
+                <span class="location" th:text="${Departure1} + ' 鴻巣'"></span>
             </div>
-            <div class="train1" th:text="${TrainName}"></div>
+            <div class="train1" th:text="${TrainName1}"></div>
             <div class="route-step2">
-            <span class="location" th:text="${Arrival} + ' - ○○：○○ 大宮(埼玉県)'"></span>
+            <span class="location" th:text="${Arrival1} + ' - ' + ${Departure2} + '大宮(埼玉県)'"></span>
             </div>
-            <div class="train2">JR湘南新宿ライン・宇都宮行</div>
+            <div class="train2"　th:text="${TrainName2}"></div>
             <div class="route-step3">
-                20:17 <span class="location">東大宮</span>
+               <span class="location" th:text="${Arrival2} + ' 東大宮'"></span>
             </div>
         </div>
     </div>
