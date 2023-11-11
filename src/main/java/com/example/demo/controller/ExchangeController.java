@@ -16,7 +16,7 @@ import com.example.demo.repositories.Train1;
 @Controller
 public class ExchangeController {
 	
-	@RequestMapping("/")
+	@RequestMapping("https://exchangetrainforme.onrender.com/")
 	public ModelAndView index(ModelAndView mav) {
 		//遷移するページを追加
 		mav.setViewName("home");
