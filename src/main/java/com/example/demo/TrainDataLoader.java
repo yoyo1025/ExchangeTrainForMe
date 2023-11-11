@@ -1,23 +1,31 @@
 package com.example.demo;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
 import com.example.demo.repositories.Train1;
 
+
 public class TrainDataLoader {
-	public List<Train1> loadTrainData(String filePath){
-		List<Train1> trains = new ArrayList<>();
-		DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
-		
-		try {
-			List<String> lines = Files.readAllLines(Paths.get(filePath));
-			for (String line : lines) {
-				 String[] parts = line.split(", ");
+	 public List<Train1> loadTrainData(String filePath){
+	        List<Train1> trains = new ArrayList<>();
+	        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+	        
+	        try {
+	            Resource resource = new ClassPathResource(filePath);
+	            BufferedReader reader = new BufferedReader(new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8));
+	            
+	            String line;
+	            while ((line = reader.readLine()) != null) {
+	                String[] parts = line.split(", ");
 	                if (parts.length >= 5) {
 	                    Train1 train = new Train1();
 	                    train.setDepartureTime(LocalTime.parse(parts[0], timeFormatter));
@@ -26,15 +34,14 @@ public class TrainDataLoader {
 	                    train.setName(parts[3] + " " + parts[4]);
 	                    trains.add(train);
 	                }
-			}
-			
-		}catch (Exception e) {
-            e.printStackTrace();
-        }
-		
-		return trains;
-	}
-	
+	            }
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	        
+	        return trains;
+	    }
+	 
 	public void displayTrains(List<Train1> trains) {
         for (Train1 train : trains) {
             System.out.println("電車名: " + train.getName());

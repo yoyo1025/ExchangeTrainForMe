@@ -43,7 +43,7 @@ public class ExchangeController {
 	    LocalTime now = LocalTime.now();
 	    
 	    // ファイルから電車のデータを読み込む(鴻巣駅から大宮駅に行く高崎線か湘南新宿ライン)
-	    String filePath1 = "src/main/resources/static/txt/Konosu-Omiya.txt";
+	    String filePath1 = "static/txt/Konosu-Omiya.txt";
 	    List<Train1> trains1 = trainDataLoader.loadTrainData(filePath1);
 	    
 	    //現在時刻から次に鴻巣駅から発車する電車を定義する
