@@ -65,7 +65,7 @@ public class ExchangeController {
 	    }
 	    
 	    //ファイルから電車のデータを読み込む(大宮駅から東大宮駅に行く宇都宮線か湘南新宿ライン)
-	    String filePath2 = "src\\main\\resources\\static\\txt\\Omiya-HigashiOmiya.txt";
+	    String filePath2 = "static/txt/Omiya-HigashiOmiya.txt";
 	    List<Train1> trains2 = trainDataLoader.loadTrainData(filePath2);
 	    
 	    //鴻巣駅から大宮駅に着いて次に乗り換える電車を定義する
@@ -99,7 +99,7 @@ public class ExchangeController {
 	    LocalTime now = LocalTime.now();
 		
 		//ファイルから電車のデータを読み込む(東大宮駅から大宮駅に行く宇都宮線か湘南新宿ライン)
-		String filePath3 = "src\\main\\resources\\static\\txt\\HigashiOmiya-Omiya.txt";
+	    String filePath3 = "static/txt/HigashiOmiya-Omiya.txt";
 		List<Train1> train3 = trainDataLoader.loadTrainData(filePath3);
 		
 		Train1 nextTrainFromHigashiOmiyaToOmiya = null;
@@ -119,7 +119,7 @@ public class ExchangeController {
 	    }
 	    
 	  //ファイルから電車のデータを読み込む(大宮駅から鴻巣駅に行く高崎線か上野東京ライン)
-	    String filePath4 = "src\\main\\resources\\static\\txt\\Omiya-Konosu.txt";
+	    String filePath4 = "static/txt/Omiya-Konosu.txt";
 	    List<Train1> trains4 = trainDataLoader.loadTrainData(filePath4);
 	    
 	    //東大宮から大宮駅に着いて次に乗り換える電車を定義する
