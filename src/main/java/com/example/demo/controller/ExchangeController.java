@@ -40,7 +40,9 @@ public class ExchangeController {
 	public ModelAndView resultGoing(ModelAndView mav) {
 		
 	    // 現在の時刻を取得
-	    LocalTime now = LocalTime.now();
+	    LocalTime now = LocalTime.now().plusHours(9);
+
+	    
 	    
 	    // ファイルから電車のデータを読み込む(鴻巣駅から大宮駅に行く高崎線か湘南新宿ライン)
 	    String filePath1 = "static/txt/Konosu-Omiya.txt";
@@ -96,7 +98,7 @@ public class ExchangeController {
 	public ModelAndView resultBacking(ModelAndView mav) {
 		
 		// 現在の時刻を取得
-	    LocalTime now = LocalTime.now();
+		LocalTime now = LocalTime.now().plusHours(9);
 		
 		//ファイルから電車のデータを読み込む(東大宮駅から大宮駅に行く宇都宮線か湘南新宿ライン)
 	    String filePath3 = "static/txt/HigashiOmiya-Omiya.txt";
