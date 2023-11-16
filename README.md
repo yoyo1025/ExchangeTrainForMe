@@ -1,6 +1,7 @@
 # ExchangeTrainForMe
-[URL](※起動まで3分くらいかかります)<br>
-https://exchangetrainforme.onrender.com<>br
+[URL]<br>
+※起動まで3分くらいかかります<br>
+https://exchangetrainforme.onrender.com<br>
 
 
 [アプリの概要]<br>
