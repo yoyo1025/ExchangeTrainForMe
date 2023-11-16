@@ -1,7 +1,7 @@
-[URL]※起動まで3分くらいかかります
-https://exchangetrainforme.onrender.com
-
 # ExchangeTrainForMe
+[URL]
+https://exchangetrainforme.onrender.com(※起動まで3分くらいかかります)
+
 [アプリの概要]
 最寄駅(鴻巣)から大学の最寄り駅(東大宮)までの電車のルート検索を高速化するためにこのアプリケーション
 
