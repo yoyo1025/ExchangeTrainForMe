@@ -1,6 +1,6 @@
 # ExchangeTrainForMe
 [URL]<br>
-※起動まで3分くらいかかります<br>
+※デプロイ先のサーバの関係上、起動まで3分くらいかかります<br>
 https://exchangetrainforme.onrender.com<br>
 
 
